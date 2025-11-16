@@ -7,3 +7,40 @@ Data Cleaning Summary:
 - Standardized all values using Proper Case
 - Converted all headers to lowercase with underscores
 - Verified data types for all numeric and date fields
+
+Task 2: Data Visualization and Storytelling
+Dataset Name: Sample - Superstore
+The dataset contains:
+- Order & shipping details
+- Sales, quantity, discount, and profit
+- Customer & segment information
+- Region, state, and city details
+- Product categories and sub-categories
+
+Data Visualization steps :
+Step 1: Data Loading & Cleaning
+Imported the Sample - Superstore.csv file into Power BI
+Verified column data types (Date, Number, Text)
+Removed blanks and corrected formatting
+Ensured consistency in the dataset
+
+Step 2: Created DAX Measures
+Below are the key measures created for dashboard analysis:
+Total Sales = SUM('Sample - Superstore'[Sales])
+Total Profit = SUM('Sample - Superstore'[Profit])
+Total Quantity = SUM('Sample - Superstore'[Quantity])
+Total Orders = DISTINCTCOUNT('Sample - Superstore'[Order ID])
+Profit Ratio = DIVIDE([Total Profit], [Total Sales], 0)
+AOV = DIVIDE([Total Sales], [Total Orders], 0)
+
+Step 3: Built Visualizations
+The following visuals were added to the dashboard:
+1. KPI Cards
+- Total Sales
+- Total Orders
+- Profit Ratio
+2. Sales Trend Line Chart: Shows sales over time (Month/Year) and helps identify seasonal patterns & trends
+3. Sales by Category (Bar Chart): Compares the performance of Furniture, Office Supplies, and Technology
+4. Sales by Region (Filled Map / Bubble Map): Visualizes geographic sales distribution across states
+5. Sub-Category Performance (Tree Map): Identifies top-performing product sub-categories
+6. Slicers (Filters): Order Date, Segment, Category, and Region
